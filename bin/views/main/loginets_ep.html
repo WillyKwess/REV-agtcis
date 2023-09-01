@@ -1,0 +1,28 @@
+{% extends layouts %} {% from forms import input_field , submit %} {% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="logo aos-init" data-aos="fade-right" data-aos-offset="300" align="center">
+            <img src="{{ __img('logo.png') }}" class="img-fluid">
+        </div>
+        <div class="col-md-12 titlesite">AUTHENTIFICATION</div>
+    </div>
+    <div class="container mt-20">
+        <div class="form aos-init" data-aos="fade-up" data-aos-offset="300">
+            <div class="reponses {{ class }}">{{ reponse ? reponse : "" }}</div>
+            <form class="validateforms" method="post" novalidate>
+                <div class="row g-3">
+                    {{ __csrf() }}
+                    {{ input_field('login','E-mail','text' , "Entrez votre E-mail svp!!!" ) }} 
+                    {{ input_field('password','Mot de passe','password' , "Entrez votre mot de passe svp!!!" ) }}
+                    {{ input_field('code','Code de l’établissement','number',"Entrez le code de votre établissement svp!!!") }} 
+                    {{ input_field('name','Nom de l’établissement','text',"Entrez le nom de votre établissement svp!!!") }}
+                    {{ submit('Se connecter' , 'bi bi-lock') }}
+                </div>
+            </form>
+        </div>
+        <div class="epaphrodite" align="center">
+            <a href="{{ __host() }}"><i class="icofont-long-arrow-left"></i> Retour</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

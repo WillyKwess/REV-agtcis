@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /bin/
+Disallow: /static/
+Disallow: /server/
+Disallow: /vendor/
+Disallow: /error/

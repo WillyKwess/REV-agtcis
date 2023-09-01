@@ -1,0 +1,44 @@
+PREMIERS PAS DE CONFIGURATION
+Apres avoir telecharger le framework, suivez la procedure suivante :
+
+ #### IMPORTANT !!!!! #####
+ Lancer : "composer update" a partir du terminal de vs code
+
+ 1 - Ouvrez le fichier du repertoire suivant : bin\epaphrodite\define\config.php
+
+    # Choisissez la langue a utiliser ( fr/eng)
+    define('_LANG_', 'fr');
+
+    # Choisissez Type de fichier a utiliser dans le front
+    define('_FRONT_', '.html');
+
+    # Remplacez "_ep" l'extension des fichiers que vous souhaiter ( Par defaut Ex: index_ep.html)
+    define('_MAIN_EXTENSION_', '_ep');
+
+    # En local Remplacez "epaphrodite-framework" par le nom de votre projet
+    define('_DOMAINE_', "epaphrodite-framework/");
+
+    # Par defaut il est false (pas activer)
+    define('_SOCKET_', false)
+
+2 - Ouvrez le fichier du repertoire suivant : bin\database\datas\config.ini
+
+    # Remplacez "root" par le nom de l'utilisateur de la BD
+    1DB_USER = root
+
+    # Remplacez "root" par le par votre mot de passe
+    1DB_PASSWORD = root
+
+    # Remplacez "epaphrodite_bd" par le nom de votre base de donnees
+    1DB_DSN = "mysql:host=localhost;dbname=epaphrodite_bd"
+
+3 - Lancer votre application a partir de votre serveur :
+    # Login par defaut : "admin"
+    # Mot de passe par defaut : "admin"
+
+Au premier lancement on vous dira le mot de passe ou login est incorrect 
+# L'action va generer de nouvelles tables dans votre base de donnees
+
+Au deuxieme vous acceceder a la page d'administration
+
+##################### FELICITATION !!!! ####################################
